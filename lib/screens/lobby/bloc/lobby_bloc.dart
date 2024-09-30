@@ -440,9 +440,9 @@ class LobbyBloc extends Bloc<LobbyEvent, LobbyState> {
       const Duration(seconds: 1),
       (timer) {
         final _e = Duration(
-                milliseconds:
-                    (AppConfig.defaultRoomExpirationHourTime * 3600000).round())
-            .inSeconds;
+          milliseconds:
+              (AppConfig.defaultRoomExpirationHourTime * 3600000).round(),
+        ).inSeconds;
         final int remainingTime = _e - timer.tick;
         if (remainingTime > 0) {
           add(

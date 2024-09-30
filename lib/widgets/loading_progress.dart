@@ -24,13 +24,8 @@ class LoadingProgress {
             canPop: false,
             child: Center(
               child: isLoading
-                  ? AbsorbPointer(
-                      child: CircularProgressIndicator(
-                        color: ColorUtils.getColor(
-                          context,
-                          ColorEnums.black33Color,
-                        ),
-                      ),
+                  ? const AbsorbPointer(
+                      child: CircularProgressIndicator(),
                     )
                   : const SizedBox(),
             ),
