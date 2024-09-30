@@ -1,0 +1,4 @@
+enum RoomTypeEnums {
+  botPlayer,
+  realPlayer,
+}

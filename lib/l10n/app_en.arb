@@ -1,0 +1,247 @@
+{
+  "appName": "RockPaperScissor",
+  "welcome": "Welcome,",
+  "gladToSeeYou": "Glad to See You!",
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "invalidEmail": "Please enter valid email",
+  "invalidPasswordLength": "Please enter valid password",
+  "loginBtn": "Login",
+  "invalidFirebasePassword": "Invalid email or password, Please check your credentials",
+  "somethingWentWrong": "Something went wrong, Please try again!",
+  "userNotFoundTitle": "Ahh! Unable to find player",
+  "userNotFoundSubtitle": "Would you like to continue while creating new user using above credentials?",
+  "cancel": "Cancel",
+  "createAc": "Yes, continue",
+  "passwordHint": "Password must contain 1 uppercase letter, 1 lowercase letter, 1 special character, 1 number, min 6 characters and Max 10 characters",
+  "or": "OR",
+  "googleSignIn": "Sign in with Google",
+  "playWithBotOption": "Play Against Bot",
+  "playMultiplayerOption": "Play Multiplayer",
+  "viewWalletOption": "View Wallet",
+  "gameHistoryOption": "Game History",
+  "quickMatchOption": "Quick Match",
+  "friendMatchOption": "Friendly Match",
+  "letsMatch": "Let's match!!\nFind your opponent",
+  "matchPreferenceTitle": "Let’s Get Rollin’!",
+  "matchPreferenceSubtitle": "Pick your bet and rounds\nit's time to play big!",
+  "matchAmountTitle": "Enter amount",
+  "play": "Play",
+  "selectRound": "Select Round",
+  "startMatch": "Start Match",
+  "insufficientWalletAmount": "You don't have sufficient balance to continue, Please top-up your wallet!",
+  "invalidPrefData": "Please fill valid detail!",
+  "roomPrefSuccess": "Let's go!!",
+  "roomLoadingText": "Sharpening Scissors...\nHold Tight!",
+  "minEntranceAmountHint": "Min bet amount should be {minAmount} (as above) to be able to join room",
+  "@minEntranceAmountHint": {
+    "placeholders": {
+      "minAmount": {
+        "type": "String",
+        "example": "Name"
+      }
+    }
+  },
+  "host": "Host",
+  "join": "Join",
+  "inviteCodeTitle": "Enter invite code",
+  "noRoomFound": "Unable to find matching invite code!",
+  "roomExpired": "Room you are looking for has been expired already!",
+  "roomJoinTitle": "Got an Invite?\nEnter the Code & Jump In!",
+  "inviteCodeReady": "Share the Invite Code",
+  "waiting": "Rock, Paper, Waiting...",
+  "inviteCodeCopied": "Copied to clipboard!\nShare it with your friend",
+  "matchStartsIn": "Match starts in",
+  "matchExpiresIn": "Match expires in",
+  "yesCancel": "Yes",
+  "no": "No",
+  "cancelRoomTitle": "Cancel Game?",
+  "cancelRoomSubtitle": "Are you sure you want to leave?\nThe battle awaits!",
+  "bufferingLoadingTitle": "Hold Tight\nWe're Prepping the scissors!",
+  "roundNoTitle": "Round {no}",
+  "@roundNoTitle": {
+    "placeholders": {
+      "no": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "botPlayerName": "Computer",
+  "defaultPlayerName": "Player {no}",
+  "@defaultPlayerName": {
+    "placeholders": {
+      "no": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "remainingSec": "Remaining ",
+  "waitingForMove": "Game On! \nJust Waiting for the Final Touch!",
+  "points": "Points: {value}",
+  "@points": {
+    "placeholders": {
+      "value": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "won": "You Have Conquered This Round! \uD83C\uDF89",
+  "lost": "Oops! You Lost This Round! ",
+  "draw": "It's a Tie! Round Draw! \uD83E\uDD1D",
+  "timeoutTitle": "Timeout",
+  "timeoutSubtitle": "Looks alike round has timed-out!",
+  "completedAllRoundSubtitle": "Game over!\nHold up! Let’s see who the real champion is!",
+  "cancelledLobbyMsg": "Your match has been cancelled successfully!",
+  "potAmount": "Prize: {amount}",
+  "@potAmount": {
+    "amount": {
+      "value": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "walletTopupFirstTimeTitle": "Congratulations!",
+  "walletTopupFirstTimeSubtitle": "Bonus {amount} added!\nTime to show your moves! \uD83D\uDCAA",
+  "@walletTopupFirstTimeSubtitle": {
+    "amount": {
+      "value": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "homeUserNameFirstTitle": "Welcome\n{username}",
+  "@homeUserNameFirstTitle": {
+    "username": {
+      "value": {
+        "type": "string",
+        "example": "1"
+      }
+    }
+  },
+  "homeUserNameSecondTitle": "Welcome back,\n{username}",
+  "@homeUserNameSecondTitle": {
+    "username": {
+      "value": {
+        "type": "string",
+        "example": "1"
+      }
+    }
+  },
+  "logoutTitle": "Logout",
+  "logoutSubtitle": "Are you sure you want to logout?",
+  "logoutPositive": "Logout",
+  "logoutNegative": "Cancel",
+  "defaultNewPlayerName": "'RockMaster",
+  "emailFieldHint": "Enter email",
+  "passwordFieldHint": "Enter password",
+  "newPlayerNameHint": "Enter player name",
+  "playerNameNote": "*Please update above name as it will be your player name",
+  "playerNameError": "Please enter valid name to proceed!",
+  "yourBalance": "Balance",
+  "topUp": "Topup",
+  "transactionWonTitle": "You've won match against {playerName}",
+  "@transactionWonTitle": {
+    "playerName": {
+      "value": {
+        "type": "string",
+        "example": "ABC"
+      }
+    }
+  },
+  "transactionLostTitle": "You've lost match against {playerName}",
+  "@transactionLostTitle": {
+    "playerName": {
+      "value": {
+        "type": "string",
+        "example": "ABC"
+      }
+    }
+  },
+  "transactionTopupTitle": "Your wallet’s been topped up with {coins} coins!",
+  "@transactionTopupTitle": {
+    "coins": {
+      "value": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "transactionTitle": "Transactions",
+  "noTransaction": "Uh-oh! \uD83D\uDCB8 \nNo transactions here...!",
+  "topupTitle": "Topup wallet",
+  "topupTextFieldTitle": "Enter amount",
+  "topupBtn": "Topup",
+  "topupError": "Please enter valid amount",
+  "topupSuccess": "Boom! Your wallet's topped up successfully! Let the games begin!",
+  "noGameHistory": "\uD83D\uDD79\uFE0F Oops! No game history yet\nTime to make some moves!",
+  "gameHistoryTitle": "History",
+  "gamePlayedWithBot": "Bot Match",
+  "gamePlayedWithFriend": "Friend Match",
+  "gamePlayedWithQuickMatch": "Quick Match",
+  "gamePlayWon": "WON",
+  "gamePlayLost": "LOST",
+  "gamePlayDraw": "DRAW",
+  "gameTotalRounds": "Total rounds: {rounds}",
+  "@gameTotalRounds": {
+    "rounds": {
+      "value": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "gamePotAmount": "Total pot: {prize}",
+  "@gamePotAmount": {
+    "prize": {
+      "value": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "wonRounds": "Won rounds: {round}",
+  "@wonRounds": {
+    "round": {
+      "value": {
+        "type": "string",
+        "example": "1"
+      }
+    }
+  },
+  "scoreboard": "Scoreboard",
+  "scoreboardLoading": "Hold up!, Let me cook!!",
+  "scoreboardWinnerTitle": "Victory! Well played!",
+  "scoreboardLoserTitle": "Defeated!\nGive it another go!",
+  "scoreboardDrawTitle": "It’s a tie! Try again!",
+  "scoreboardRounds": "Rounds ({no})",
+  "@scoreboardRounds": {
+    "no": {
+      "value": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "scoreRoundWinner": "Winner",
+  "scoreRoundDraw": "Draw",
+  "scoreRoundWonAmount": "Congratulations! \nYou've won {amount} by this round!",
+  "scoreRoundLostAmount": "Opps! You've lost {amount} by this round!",
+  "scoreboardTotalPrize": "Total prize: {amount}",
+  "@scoreboardTotalPrize": {
+    "amount": {
+      "value": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "roomExpiredToast": "Sorry! your match has been expired!!",
+  "you": "You",
+  "vs":"VS"
+}
