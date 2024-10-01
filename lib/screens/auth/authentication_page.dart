@@ -450,6 +450,17 @@ class AuthenticationPage extends StatelessWidget {
           isSuccess: false,
         ),
       );
+    } else if (state is FirebaseAlreadyLoggedInUserState) {
+      toastBuilder?.showToast(
+        gravity: ToastGravity.TOP,
+        toastDuration: const Duration(
+          seconds: AppConfig.defaultToastDuration,
+        ),
+        child: ToastWidget(
+          message: appLocalizations.alreadyLoggedInUserError,
+          isSuccess: false,
+        ),
+      );
     } else if (state is FirebaseLoginSuccessHomeState) {
       Navigator.pushReplacementNamed(
         context,

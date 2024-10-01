@@ -119,9 +119,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         firebaseUserId,
       );
       if (profileInfo != null) {
-        await _saveProfileInfo(
-          profileInfo: profileInfo,
-        );
+        if (profileInfo.fcmTokens == null ||
+            profileInfo.fcmTokens!.trim().isEmpty) {
+          await _saveProfileInfo(
+            profileInfo: profileInfo,
+          );
+        } else {
+          emit(FirebaseAlreadyLoggedInUserState());
+        }
       } else {
         final data = <String, dynamic>{};
         final createdAt = DateTime.now().millisecondsSinceEpoch;

@@ -24,6 +24,8 @@ class InVisiblePasswordFieldState extends AuthState {}
 
 class FirebaseLoginInvalidUserState extends AuthState {}
 
+class FirebaseAlreadyLoggedInUserState extends AuthState {}
+
 class FirebaseLoginInvalidPasswordState extends AuthState {}
 
 class FirebaseLoginFailedState extends AuthState {

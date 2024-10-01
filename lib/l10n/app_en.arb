@@ -243,5 +243,6 @@
   },
   "roomExpiredToast": "Sorry! your match has been expired!!",
   "you": "You",
-  "vs":"VS"
+  "vs":"VS",
+  "alreadyLoggedInUserError":"Oops! Looks like your account is already logged in on another device!"
 }

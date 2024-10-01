@@ -67,12 +67,14 @@ class NotificationTokenHelper {
   static Future<void> removeTokenOnLogout() async {
     final firebaseUserId = await StaticFunctions.getCurrentUserId();
     if (firebaseUserId != null && _fcmToken?.trim().isNotEmpty == true) {
-      await FirebaseFirestore.instance
-          .collection(FireStoreConfig.userCollection)
-          .doc(firebaseUserId)
-          .update({
-        FireStoreConfig.userFcmTokenField: null,
-      });
+      try {
+        await FirebaseFirestore.instance
+            .collection(FireStoreConfig.userCollection)
+            .doc(firebaseUserId)
+            .update({
+          FireStoreConfig.userFcmTokenField: null,
+        });
+      } on Exception catch (_) {}
     }
   }
 

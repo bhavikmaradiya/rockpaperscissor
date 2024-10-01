@@ -6,12 +6,14 @@ class PlayerMove {
   String? player2Id;
   String? player1Move;
   String? player2Move;
+  int? updatedAt;
 
   PlayerMove({
     this.player1Id,
     this.player2Id,
     this.player1Move,
     this.player2Move,
+    this.updatedAt,
   });
 
   factory PlayerMove.fromSnapshot(DocumentSnapshot document) {
@@ -24,6 +26,7 @@ class PlayerMove {
       player2Id: data[FireStoreConfig.movesPlayer2IdField] as String?,
       player1Move: data[FireStoreConfig.movesPlayer1MoveField] as String?,
       player2Move: data[FireStoreConfig.movesPlayer2MoveField] as String?,
+      updatedAt: data[FireStoreConfig.updatedAtField] as int?,
     );
   }
 
@@ -33,6 +36,7 @@ class PlayerMove {
       FireStoreConfig.movesPlayer2IdField: player2Id,
       FireStoreConfig.movesPlayer1MoveField: player1Move,
       FireStoreConfig.movesPlayer2MoveField: player2Move,
+      FireStoreConfig.updatedAtField: updatedAt,
     };
   }
 }

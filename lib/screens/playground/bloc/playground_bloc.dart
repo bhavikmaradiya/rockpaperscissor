@@ -403,7 +403,8 @@ class PlaygroundBloc extends Bloc<PlaygroundEvent, PlaygroundState> {
 
     _playerMoves = PlayerMove()
       ..player1Id = _player1Id
-      ..player2Id = _player2Id;
+      ..player2Id = _player2Id
+      ..updatedAt = DateTime.now().millisecondsSinceEpoch;
 
     await FirebaseFirestore.instance
         .collection(FireStoreConfig.playerMovesCollection)
@@ -557,7 +558,7 @@ class PlaygroundBloc extends Bloc<PlaygroundEvent, PlaygroundState> {
             );
             add(
               StartTimerEvent(
-                AppConfig.defaultRoundMaxBufferTime,
+                AppConfig.defaultRoundTimeoutTime,
               ),
             );
           } else if (player1Move != null && player2Move != null) {
@@ -704,6 +705,8 @@ class PlaygroundBloc extends Bloc<PlaygroundEvent, PlaygroundState> {
     if (shouldDeletePlayerMoves) {
       batch.delete(playerMoveRef);
     } else if (playerMoveData.isNotEmpty) {
+      playerMoveData[FireStoreConfig.updatedAtField] =
+          DateTime.now().millisecondsSinceEpoch;
       batch.update(
         playerMoveRef,
         playerMoveData,

@@ -85,7 +85,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   Future<void> _checkForInitialTopup(
     Emitter<HomeState> emit,
   ) async {
+    final walletBal = currentUser?.walletBalance?.round();
     if (isFirstTimeUser &&
+        walletBal != null &&
+        walletBal > 0 &&
+        AppConfig.initialWalletAmount > 0 &&
         currentUser?.walletBalance?.round() == AppConfig.initialWalletAmount) {
       emit(HomeWalletTopUpState());
       await prefs.setBool(
@@ -101,6 +105,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         HomeWalletTopUpState(
           shouldHide: true,
         ),
+      );
+    } else {
+      await prefs.setBool(
+        PreferenceConfig.isFirstTimePref,
+        false,
       );
     }
   }

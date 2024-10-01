@@ -51,6 +51,7 @@ class _GameHistoryPageState extends State<GameHistoryPage> {
     _appLocalizations = AppLocalizations.of(context)!;
     return Scaffold(
       body: SafeArea(
+        bottom: false,
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: Dimens.dimens_20.w,
@@ -105,16 +106,20 @@ class _GameHistoryPageState extends State<GameHistoryPage> {
                       padding: EdgeInsets.zero,
                       itemBuilder: (_, index) {
                         final currentMatch = list[index];
-                        return GameHistoryItem(
-                          currentMatch: currentMatch,
-                          appLocalizations: _appLocalizations,
-                          onTap: () {
-                            Navigator.pushNamed(
-                              context,
-                              Routes.scoreboard,
-                              arguments: currentMatch.roomId!,
-                            );
-                          },
+                        return SafeArea(
+                          top: false,
+                          bottom: index == list.length - 1,
+                          child: GameHistoryItem(
+                            currentMatch: currentMatch,
+                            appLocalizations: _appLocalizations,
+                            onTap: () {
+                              Navigator.pushNamed(
+                                context,
+                                Routes.scoreboard,
+                                arguments: currentMatch.roomId!,
+                              );
+                            },
+                          ),
                         );
                       },
                     );

@@ -13,7 +13,7 @@ class AppConfig {
   static const String defaultBotId = '#botId';
   static const defaultRoomExpirationHourTime = 0.25; //15 min
   static const defaultRoundStartBuffer = 6000; // millisec
-  static const defaultRoundMaxBufferTime = 20; //20 sec
+  static const defaultRoundTimeoutTime = 20; //20 sec
   static const defaultLobbyBufferTime = 10; //10 sec
   static const defaultTimeoutDialogBufferTime = 4; //sec
   static const defaultBotSelectionBufferTime = 0; //sec
